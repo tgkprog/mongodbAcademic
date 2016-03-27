@@ -1,0 +1,12 @@
+db.stuff.insert({'thing':'apple'});
+db.stuff.insert({'thing':'pear'});
+db.stuff.insert({'thing':'apple'});
+
+db.stuff.find( );
+
+ db.stuff.createIndex({thing:1})
+ db.stuff.find( );
+ db.stuff.dropIndex({thing:1})
+
+
+db.stuff.createIndex({thing:1}, {unique:1})

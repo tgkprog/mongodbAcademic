@@ -1,0 +1,43 @@
+> db.name
+m101.name
+> db.users.insert({name:"richard", email : {work : "rc@worka.com", personal:"ri@aa.com"}})
+
+
+//find exact match
+
+db.users.find({email : { work : "rc@worka.com",  personal:"ri@aa.com" }})
+
+db.users.find({email : { work : "rc@worka.com",  personal:"ri@aa.com" }}).pretty()
+
+
+db.users.find({ "email.work" : "rc@worka.com"}).pretty()
+
+
+//products fill
+db.product.insert({product:"s23", price:10500, reviews:[{user:"u1", rating :5},{user: "r3", rating:4}]})
+
+db.product.insert({product:"f45", price:10900, reviews:[{user:"u343", rating :4},{user: "b3", rating:4}]})
+
+db.product.insert({product:"b723", price:400, reviews:[{user:"u1", rating :5},{user: "r3", rating:4}]})
+
+db.product.insert({product:"n85", price:500, reviews:[{user:"u1", rating :5},{user: "r3", rating:4}]})
+
+db.product.insert({product:"n34", price:6700, reviews:[{user:"u1", rating :3},{user: "r3", rating:4}]})
+
+//product above certain price and at least one rating of 5
+db.product.find({ $and :  
+	[{price:{$gte: 10000}},
+	{"reviews.rating" : {$gte: 5}}
+	]
+}).pretty()
+
+
+ db.product.find({ $and : [{price:{$gte: 10000}}, {"reviews.rating" : {$gte: 5}} ] }, {_id:0, product:1, price:1})
+
+db.product.find({ $and : [{price:{$lt: 10000}}, {"reviews.rating" : {$gte: 5}} ] }, {_id:0, product:1, price:1})
+
+
+db.product.find({
+price : {$gte : 500}
+})
+

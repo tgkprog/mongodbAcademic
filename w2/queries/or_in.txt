@@ -1,0 +1,24 @@
+db.fav.find(
+{
+	$or: [
+		{name:{$in : ["rfa", "sue", "radhar"]}},
+		{favs :{ $in : ["apple"]} }
+	]
+}
+
+).pretty()
+
+	
+db.fav.find({
+$or:[
+	{$and :  [{name: "radha"},{favs:{$all:["apple", "palak"]}}]},
+	{name : "randomNotThere_Name"}
+]
+}).pretty()
+
+db.fav.find({
+$or:[
+	{$and :  [{name: "radha"},{favs:{$all:["apple", "palak"]}}]},
+	{name : "sue"}
+]
+}).pretty()
