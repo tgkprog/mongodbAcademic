@@ -1,0 +1,150 @@
+...
+...
+>
+>
+> db.fav.find(
+... {
+... $or: {
+... {name:{$in : ["rfa", "sue", "radhar"]}},
+... {$favs :{ $in : ["apple"]} }
+... }
+... }
+...
+... ).pretty()
+2016-03-27T13:43:55.036+0530 E QUERY    SyntaxError: Unexpected token {
+> db.fav.find(
+... {
+... $or: [
+... {name:{$in : ["rfa", "sue", "radhar"]}},
+... {$favs :{ $in : ["apple"]} }
+... ]
+... }
+...
+... ).pretty()
+Error: error: {
+        "$err" : "Can't canonicalize query: BadValue unknown top level operator: $favs",
+        "code" : 17287
+}
+>
+> db.fav.find(
+... {
+... $or: [
+... {name:{$in : ["rfa", "sue", "radhar"]}},
+... {favs :{ $in : ["apple"]} }
+... ]
+... }
+...
+... ).pretty()
+{
+        "_id" : ObjectId("56f6b2d83bfa897bc5ade65c"),
+        "name" : "sue",
+        "favs" : [
+                "beer",
+                "carrot"
+        ]
+}
+{
+        "_id" : ObjectId("56f6b63a3bfa897bc5ade65e"),
+        "name" : "radha",
+        "favs" : [
+                "apple",
+                "beans",
+                "carrot"
+        ]
+}
+{
+        "_id" : ObjectId("56f6b6453bfa897bc5ade65f"),
+        "name" : "radha",
+        "favs" : [
+                "apple",
+                "beans",
+                "palak"
+        ]
+}
+{
+        "_id" : ObjectId("56f6b64d3bfa897bc5ade660"),
+        "name" : "radh2a",
+        "favs" : [
+                "apple",
+                "beans",
+                "palak"
+        ]
+}
+{
+        "_id" : ObjectId("56f6b6563bfa897bc5ade661"),
+        "name" : "rfa",
+        "favs" : [
+                "apple",
+                "beans",
+                "carrot"
+        ]
+}
+> db.fav.find.pretty()
+2016-03-27T14:11:23.856+0530 E QUERY    TypeError: Object function ( query , fields , limit , s
+batchSize, options ){
+    var cursor = new DBQuery( this._mongo , this._db , this ,
+                        this._fullName , this._massageObject( query ) , fields , limit , skip ,
+hSize , options || this.getQueryOptions() );
+
+    var connObj = this.getMongo();
+    var readPrefMode = connObj.getReadPrefMode();
+    if (readPrefMode != null) {
+        cursor.readPref(readPrefMode, connObj.getReadPrefTagSet());
+    }
+
+    return cursor;
+} has no method 'pretty'
+    at (shell):1:13
+> db.fav.find().pretty()
+{
+        "_id" : ObjectId("56f6b2d83bfa897bc5ade65c"),
+        "name" : "sue",
+        "favs" : [
+                "beer",
+                "carrot"
+        ]
+}
+{
+        "_id" : ObjectId("56f6b2eb3bfa897bc5ade65d"),
+        "name" : "radha",
+        "favs" : [
+                "carrot",
+                "beans"
+        ]
+}
+{
+        "_id" : ObjectId("56f6b63a3bfa897bc5ade65e"),
+        "name" : "radha",
+        "favs" : [
+                "apple",
+                "beans",
+                "carrot"
+        ]
+}
+{
+        "_id" : ObjectId("56f6b6453bfa897bc5ade65f"),
+        "name" : "radha",
+        "favs" : [
+                "apple",
+                "beans",
+                "palak"
+        ]
+}
+{
+        "_id" : ObjectId("56f6b64d3bfa897bc5ade660"),
+        "name" : "radh2a",
+        "favs" : [
+                "apple",
+                "beans",
+                "palak"
+        ]
+}
+{
+        "_id" : ObjectId("56f6b6563bfa897bc5ade661"),
+        "name" : "rfa",
+        "favs" : [
+                "apple",
+                "beans",
+                "carrot"
+        ]
+}
