@@ -1,0 +1,12 @@
+db.fav.find({
+	name : "sue"}
+	).pretty()
+		
+
+		
+db.fav.find({
+	favs : {$all : ["apple", "palak"]}
+	}).pretty()
+	
+	
+	
