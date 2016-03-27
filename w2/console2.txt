@@ -1,0 +1,45 @@
+cur = db.product.find({}); null;
+
+cur = db.product.find({}, {_id:0, product:1, reviews:1, price:1}); null;
+
+cur.limit(3); null;
+
+cur.sort({price: 1});null
+
+
+ (cur = db.product.find({}, {_id:0, product:1, price:1}).pretty()).limit(3).sort({name:1}); null;
+
+cur.next()
+
+var i = 0;
+while(cur.hasNext()){
+    i++
+	print(" " + i +" " )
+	printjson(cur.next())
+}
+
+
+db.scores.insert({name: "ho", score:92, type : "essay"})
+
+db.scores.insert({name: "ho", score:92, type : "math"});
+
+db.scores.insert({name: "Npo", score:33, type : "essay"});
+
+db.scores.insert({name: "bo", score:90, type : "essay"})
+
+db.scores.insert({name: "Bop", score:91, type : "essay"})
+
+db.scores .find({ score :{$gt: 90},
+	type : "essay"
+}).pretty()
+
+db.scores.count({ type : "essay", score :{$gt: 90}})
+
+db.scores.update({name: "Bop", type:"essay2"}, {$set: {score:97.6}}) //create or set existing field called score
+db.scores .find({ score :{$gte: 90}, type : "essay" }).pretty()
+
+db.scores.update({name: "Bop", type:"essay2"}, {$inc : {score :1}}) //modifies 0 as no match 
+db.scores.update({name: "Bop", type:"essay"}, {$inc : {score :1}}) //change by amount 
+db.scores.update({name: "Bop", type:"essay"}, {$inc : {score : -2.5}}) //change by amount 
+
+
