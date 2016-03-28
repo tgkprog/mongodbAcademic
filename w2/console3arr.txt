@@ -1,0 +1,77 @@
+> db.arr.insert({_id:0, a:[0,1,2,3,4]})
+WriteResult({ "nInserted" : 1 })
+> db.arr.find()
+{ "_id" : 0, "a" : [ 0, 1, 2, 3, 4 ] }
+
+
+> db.arr.update({_id:0}, {$set:{"a.2":5}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.arr.find()
+{ "_id" : 0, "a" : [ 0, 1, 5, 3, 4 ] }
+
+
+> db.arr.update({_id:0}, {$push:{"a":6}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.arr.find()
+{ "_id" : 0, "a" : [ 0, 1, 5, 3, 4, 6 ] }
+
+>
+> db.arr.update({_id:0}, {$pop:{"a":1}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.arr.find()
+{ "_id" : 0, "a" : [ 0, 1, 5, 3, 4 ] }
+
+> db.arr.update({_id:0}, {$pop:{"a":2}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.arr.find()
+{ "_id" : 0, "a" : [ 0, 1, 5, 3 ] }
+
+> db.arr.update({_id:0}, {$pop:{"a":-1}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.arr.find()
+{ "_id" : 0, "a" : [ 1, 5, 3 ] }
+
+
+ db.arr.update({_id:0}, {$pushAll:{"a": [7,9]}})
+ 
+  db.arr.find()
+  
+  
+  db.arr.update({_id:0}, {$pull:{"a": 7}})
+ 
+  db.arr.find()
+  db.arr.update({_id:0}, {$pushAll:{"a": [7,9,7]}})
+  db.arr.update({_id:0}, {$pull:{"a": 7}})
+  
+  db.arr.update({_id:0}, {$pullAll:{"a": [7,9]}})
+  
+  db.arr.update({_id:0}, {$addToSet:{"a": 7}})
+  
+  
+  db.scores.update({ 'score' : {'$lt' : 70}},{$inc : {'score':+20}} , {multi:true})
+  
+  
+  ----
+  
+  homework
+  mongoimport -d students -c grades < grades.json
+  
+  
+  cur = db.grades.find({ student_id:{'$in':[191,50]}}); null
+  cur.sort({"student_id" :1, 'score' :1});null
+  
+  var cid = -1
+  var removed = false;
+  while (cur.hasNext()){
+	a = cur.next()
+	if(a.student_id == cid){
+	}else{
+		//new student
+		cid = a.student_id
+		removed = false
+	}
+	if(a.type == "homework" && removed ==false){
+		db.grades.remove(a)
+		removed = true
+	}
+  }

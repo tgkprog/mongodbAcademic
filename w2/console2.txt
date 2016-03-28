@@ -43,3 +43,13 @@ db.scores.update({name: "Bop", type:"essay"}, {$inc : {score :1}}) //change by a
 db.scores.update({name: "Bop", type:"essay"}, {$inc : {score : -2.5}}) //change by amount 
 
 
+//add a two new fields
+ db.scores.update({name: "Bop", type:"essay"}, {$inc : {score :3.7, add1 : 3243, add2:3}})
+/remove one of them
+ db.scores.update({name: "Bop", type:"essay"}, {$unset : { add2:1}})
+
+ 
+ 
+  db.users.update({username: "jimmy"}, {'$unset': {interests :1}})
+  
+  db.users.insert({'username': 'jimmy', favorite_color: 'blue', interests:['debating', 'politics']})
