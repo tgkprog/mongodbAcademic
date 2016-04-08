@@ -11,3 +11,47 @@ use school
  db.plcs.find({loc: { "$near" : [25,24] }}).limit(2)
 
  db.plcs.find({loc: { "$near" : [125,124] }}).limit(2)
+
+
+
+
+ 	db.places.find(
+	   {
+	     location:
+	       { $near :
+	          {
+	            $geometry: { type: "Point",  coordinates: [ -73.9667, 40.78 ] },
+	            $minDistance: 1000,
+	            $maxDistance: 5000
+	          }
+	       }
+	   }
+)
+
+
+
+db.stores.find(
+   {
+     location:
+       { $near :
+          {
+            $geometry: { type: "Point",  coordinates: [ 130, 39 ] },
+
+            $maxDistance: 1000000
+          }
+       }
+   }
+)
+
+---
+full text search
+---
+
+
+db.students.find({student_id:{$gt:500000}, class_id:54}).sort({student_id:1}).hint({class_id:1}).explain("executionstats")
+
+--
+
+right index
+
+Equality fields, sort fields, range fields

@@ -107,3 +107,9 @@ e3.find ({a:4, c:13})
 
 var e3 = db.a.explain("allPlansExecution");
 
+
+//explain("executionStats").
+choose which index
+
+Index cache cleared when 1000 rows added to collection, mongod restarted, index rebuilt, index removed or added
+restart
