@@ -106,3 +106,4 @@ e3.find ({a:4, c:13})
   e3.find ({a:6001, c:8})
 
 var e3 = db.a.explain("allPlansExecution");
+
