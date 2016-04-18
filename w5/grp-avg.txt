@@ -1,0 +1,38 @@
+db.zips.aggregate([
+   {$match : {$or: [{"state" : "CT"} , {"state" : "NJ"}]}
+   }
+,
+  {$group:
+     {
+	 _id: {
+	     "state" : "$state", "city" : "$city"
+	 },
+	 popultn:{$sum:"$pop"}
+     }
+    }
+])
+
+
+db.abc1.aggregate([
+{$group : 
+		{
+			_id : {"a" : "$a"}
+			, {$avg : "$c"}	
+		}
+	}
+	
+	])
+	
+	
+	
+db.abc1.aggregate([
+{$group : 
+		{
+			_id : {"a" : "$a"}
+			, 'avg' : {$avg : "$c"}	
+		}
+	}
+	
+	])
+	
+	
