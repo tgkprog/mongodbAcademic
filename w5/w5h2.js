@@ -1,8 +1,8 @@
+//final answer w5.2
 use agg;
 db.zips.aggregate([
    {$match : {$or: [{"state" : "CA"} , {"state" : "NY"}]}
-   }
-,
+   },
   {$group:
      {
 	 _id: {
@@ -12,22 +12,20 @@ db.zips.aggregate([
      }
     },	  
 		  
-	{$match: 	{ "popultn" : 	  	{ $gt: 25000}}}		 
-
-	
-	
-	,	
+	{$match: 	{ "popultn" : 	  	{ $gt: 25000}}},	
 	{$group : 
 		{
-			_id : {"a" : "a"}
+			_id : {"Of_2_states" : "CA_NY"}
 			, 'avg_pop' :  ({$avg : "$popultn"})	
 		}
-	}
-	,
+	},
 	{$project : {
 		"_id" : 0, "avg_pop" : {$ceil:"$avg_pop"}
 		
 	}}
-
 ])
+
+
+
+
 
