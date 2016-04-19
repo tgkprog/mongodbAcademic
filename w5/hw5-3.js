@@ -28,10 +28,11 @@ db.grades.aggregate([
 	 
 	}}	
 	,{$sort : {"avgMark": -1}}
-	,{$limit : 399}
+	,{$limit : 10}
   ])
   
   /**
+  Limit 1 would work too, kept 10 to see more results
   
   { "_id" : { "$oid" : "50b59cd75bed76f46522c34e" }, "student_id" : 0, "class_id" : 2, "scores" : [ { "type" : "exam", "score" : 57.92947112575566 }, { "type" : "quiz", "score" : 21.24542588206755 }, {
 	  
