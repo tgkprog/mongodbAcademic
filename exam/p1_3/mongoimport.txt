@@ -1,0 +1,1 @@
+mongoimport --batchSize 1  --db blog --collection posts --drop  "C:\Users\t\Downloads\2016\mongo\posts6.json"

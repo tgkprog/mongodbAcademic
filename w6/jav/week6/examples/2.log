@@ -1,0 +1,12 @@
+2016-04-25T20:32:59.508+0530 I CONTROL  [initandlisten] MongoDB starting : pid=9968 port=27018 dbpath=D:\data\mongoes\rs1\rs1B 64-bit host=t4
+2016-04-25T20:32:59.515+0530 I CONTROL  [initandlisten] targetMinOS: Windows Vista/Windows Server 2008
+2016-04-25T20:32:59.515+0530 I CONTROL  [initandlisten] db version v3.2.5
+2016-04-25T20:32:59.515+0530 I CONTROL  [initandlisten] git version: 34e65e5383f7ea1726332cb175b73077ec4a1b02
+2016-04-25T20:32:59.516+0530 I CONTROL  [initandlisten] allocator: tcmalloc
+2016-04-25T20:32:59.516+0530 I CONTROL  [initandlisten] modules: none
+2016-04-25T20:32:59.516+0530 I CONTROL  [initandlisten] build environment:
+2016-04-25T20:32:59.517+0530 I CONTROL  [initandlisten]     distarch: x86_64
+2016-04-25T20:32:59.517+0530 I CONTROL  [initandlisten]     target_arch: x86_64
+2016-04-25T20:32:59.517+0530 I CONTROL  [initandlisten] options: { net: { port: 27018 }, replication: { oplogSizeMB: 64, replSet: "m101" }, storage: { dbPath: "D:\data\mongoes\rs1\rs1B", mmapv1: { smallFiles: true } }, systemLog: { destination: "file", path: "2.log" } }
+2016-04-25T20:32:59.519+0530 I STORAGE  [initandlisten] exception in initAndListen: 29 Data directory D:\data\mongoes\rs1\rs1B not found., terminating
+2016-04-25T20:32:59.519+0530 I CONTROL  [initandlisten] dbexit:  rc: 100

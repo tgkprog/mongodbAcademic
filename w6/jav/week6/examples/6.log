@@ -1,0 +1,335 @@
+2016-04-25T14:01:51.321+0530 I CONTROL  [initandlisten] MongoDB starting : pid=6552 port=27022 dbpath=D:\data\mongoes\rs1\drs1F 64-bit host=t4
+2016-04-25T14:01:51.321+0530 I CONTROL  [initandlisten] targetMinOS: Windows Vista/Windows Server 2008
+2016-04-25T14:01:51.321+0530 I CONTROL  [initandlisten] db version v3.2.5
+2016-04-25T14:01:51.321+0530 I CONTROL  [initandlisten] git version: 34e65e5383f7ea1726332cb175b73077ec4a1b02
+2016-04-25T14:01:51.322+0530 I CONTROL  [initandlisten] allocator: tcmalloc
+2016-04-25T14:01:51.322+0530 I CONTROL  [initandlisten] modules: none
+2016-04-25T14:01:51.322+0530 I CONTROL  [initandlisten] build environment:
+2016-04-25T14:01:51.322+0530 I CONTROL  [initandlisten]     distarch: x86_64
+2016-04-25T14:01:51.322+0530 I CONTROL  [initandlisten]     target_arch: x86_64
+2016-04-25T14:01:51.322+0530 I CONTROL  [initandlisten] options: { net: { port: 27022 }, replication: { oplogSizeMB: 64, replSet: "m101" }, storage: { dbPath: "D:\data\mongoes\rs1\drs1F", mmapv1: { smallFiles: true } }, systemLog: { destination: "file", path: "6.log" } }
+2016-04-25T14:01:51.323+0530 I -        [initandlisten] Detected data files in D:\data\mongoes\rs1\drs1F created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2016-04-25T14:01:51.324+0530 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=4G,session_max=20000,eviction=(threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2016-04-25T14:01:51.746+0530 I STORAGE  [initandlisten] Starting WiredTigerRecordStoreThread local.oplog.rs
+2016-04-25T14:01:51.747+0530 I STORAGE  [initandlisten] The size storer reports that the oplog contains 11 records totaling to 1085 bytes
+2016-04-25T14:01:51.747+0530 I STORAGE  [initandlisten] Scanning the oplog to determine where to place markers for truncation
+2016-04-25T14:01:51.780+0530 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+2016-04-25T14:01:51.780+0530 I CONTROL  [initandlisten] 
+2016-04-25T14:01:51.780+0530 I CONTROL  [initandlisten] ** WARNING: Insecure configuration, access control is not enabled and no --bind_ip has been specified.
+2016-04-25T14:01:51.780+0530 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted, 
+2016-04-25T14:01:51.780+0530 I CONTROL  [initandlisten] **          and the server listens on all available network interfaces.
+2016-04-25T14:01:51.780+0530 I CONTROL  [initandlisten] 
+2016-04-25T14:01:51.786+0530 I REPL     [initandlisten] Did not find local replica set configuration document at startup;  NoMatchingDocument: Did not find replica set configuration document in local.system.replset
+2016-04-25T14:01:51.787+0530 I NETWORK  [HostnameCanonicalizationWorker] Starting hostname canonicalization worker
+2016-04-25T14:01:51.787+0530 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'D:/data/mongoes/rs1/drs1F/diagnostic.data'
+2016-04-25T14:01:51.789+0530 I NETWORK  [initandlisten] waiting for connections on port 27022
+2016-04-25T14:01:52.227+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62324 #1 (1 connection now open)
+2016-04-25T14:01:52.228+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62320 #2 (2 connections now open)
+2016-04-25T14:01:52.332+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62327 #3 (3 connections now open)
+2016-04-25T14:01:52.338+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62329 #4 (4 connections now open)
+2016-04-25T14:01:52.525+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62331 #5 (5 connections now open)
+2016-04-25T14:01:53.236+0530 I ASIO     [NetworkInterfaceASIO-0] Successfully connected to localhost:27018
+2016-04-25T14:01:53.236+0530 I ASIO     [NetworkInterfaceASIO-0] Successfully connected to localhost:27021
+2016-04-25T14:01:53.249+0530 I REPL     [replExecDBWorker-2] Starting replication applier threads
+2016-04-25T14:01:53.249+0530 W REPL     [rsSync] did not receive a valid config yet
+2016-04-25T14:01:53.250+0530 I REPL     [ReplicationExecutor] New replica set config in use: { _id: "m101", version: 3, protocolVersion: 1, members: [ { _id: 0, host: "localhost:27017", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 0.0, tags: {}, slaveDelay: 8, votes: 1 }, { _id: 1, host: "localhost:27018", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 2, host: "localhost:27019", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 3, host: "localhost:27020", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 4, host: "localhost:27021", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 5, host: "localhost:27022", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 } ], settings: { chainingAllowed: true, heartbeatIntervalMillis: 2000, heartbeatTimeoutSecs: 10, electionTimeoutMillis: 10000, getLastErrorModes: {}, getLastErrorDefaults: { w: 1, wtimeout: 0 }, replicaSetId: ObjectId('571dd0a5431ebf60ecf35f5f') } }
+2016-04-25T14:01:53.250+0530 I REPL     [ReplicationExecutor] This node is localhost:27022 in the config
+2016-04-25T14:01:53.250+0530 I REPL     [ReplicationExecutor] transition to STARTUP2
+2016-04-25T14:01:53.251+0530 I REPL     [ReplicationExecutor] Member localhost:27018 is now in state PRIMARY
+2016-04-25T14:01:53.251+0530 I REPL     [ReplicationExecutor] Member localhost:27021 is now in state SECONDARY
+2016-04-25T14:01:53.337+0530 I ASIO     [NetworkInterfaceASIO-0] Successfully connected to localhost:27017
+2016-04-25T14:01:53.337+0530 I REPL     [ReplicationExecutor] Member localhost:27017 is now in state SECONDARY
+2016-04-25T14:01:53.340+0530 I ASIO     [NetworkInterfaceASIO-0] Successfully connected to localhost:27020
+2016-04-25T14:01:53.340+0530 I REPL     [ReplicationExecutor] Member localhost:27020 is now in state SECONDARY
+2016-04-25T14:01:53.527+0530 I ASIO     [NetworkInterfaceASIO-0] Successfully connected to localhost:27019
+2016-04-25T14:01:53.527+0530 I REPL     [ReplicationExecutor] Member localhost:27019 is now in state SECONDARY
+2016-04-25T14:01:54.248+0530 I ASIO     [NetworkInterfaceASIO-0] Successfully connected to localhost:27020
+2016-04-25T14:01:54.248+0530 I ASIO     [NetworkInterfaceASIO-0] Successfully connected to localhost:27019
+2016-04-25T14:01:54.250+0530 I REPL     [rsSync] initial sync pending
+2016-04-25T14:01:54.250+0530 I REPL     [rsSync] no valid sync sources found in current replset to do an initial sync
+2016-04-25T14:01:54.259+0530 I ASIO     [NetworkInterfaceASIO-0] Successfully connected to localhost:27017
+2016-04-25T14:01:55.250+0530 I REPL     [rsSync] initial sync pending
+2016-04-25T14:01:55.250+0530 I REPL     [rsSync] no valid sync sources found in current replset to do an initial sync
+2016-04-25T14:01:56.251+0530 I REPL     [rsSync] initial sync pending
+2016-04-25T14:01:56.251+0530 I REPL     [rsSync] no valid sync sources found in current replset to do an initial sync
+2016-04-25T14:01:57.252+0530 I REPL     [rsSync] initial sync pending
+2016-04-25T14:01:57.252+0530 I REPL     [rsSync] no valid sync sources found in current replset to do an initial sync
+2016-04-25T14:01:58.253+0530 I REPL     [rsSync] initial sync pending
+2016-04-25T14:01:58.253+0530 I REPL     [rsSync] no valid sync sources found in current replset to do an initial sync
+2016-04-25T14:01:59.253+0530 I REPL     [rsSync] initial sync pending
+2016-04-25T14:01:59.253+0530 I REPL     [ReplicationExecutor] syncing from: localhost:27021
+2016-04-25T14:01:59.270+0530 I REPL     [rsSync] initial sync drop all databases
+2016-04-25T14:01:59.270+0530 I STORAGE  [rsSync] dropAllDatabasesExceptLocal 3
+2016-04-25T14:01:59.274+0530 I REPL     [rsSync] initial sync clone all databases
+2016-04-25T14:01:59.277+0530 I REPL     [rsSync] initial sync cloning db: course
+2016-04-25T14:01:59.298+0530 I INDEX    [rsSync] build index on: course.replication properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "course.replication" }
+2016-04-25T14:01:59.298+0530 I INDEX    [rsSync] 	 building index using bulk method
+2016-04-25T14:01:59.303+0530 I INDEX    [rsSync] build index done.  scanned 6 total records. 0 secs
+2016-04-25T14:01:59.303+0530 I REPL     [rsSync] initial sync cloning db: test
+2016-04-25T14:01:59.321+0530 I INDEX    [rsSync] build index on: test.d properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "test.d" }
+2016-04-25T14:01:59.321+0530 I INDEX    [rsSync] 	 building index using bulk method
+2016-04-25T14:01:59.326+0530 I INDEX    [rsSync] build index done.  scanned 1 total records. 0 secs
+2016-04-25T14:01:59.326+0530 I REPL     [rsSync] initial sync data copy, starting syncup
+2016-04-25T14:01:59.326+0530 I REPL     [rsSync] oplog sync 1 of 3
+2016-04-25T14:01:59.327+0530 I REPL     [rsSync] oplog sync 2 of 3
+2016-04-25T14:01:59.327+0530 I REPL     [rsSync] initial sync building indexes
+2016-04-25T14:01:59.327+0530 I REPL     [rsSync] initial sync cloning indexes for : course
+2016-04-25T14:01:59.330+0530 I STORAGE  [rsSync] copying indexes for: { name: "replication", options: {} }
+2016-04-25T14:01:59.331+0530 I REPL     [rsSync] initial sync cloning indexes for : test
+2016-04-25T14:01:59.334+0530 I STORAGE  [rsSync] copying indexes for: { name: "d", options: {} }
+2016-04-25T14:01:59.334+0530 I REPL     [rsSync] oplog sync 3 of 3
+2016-04-25T14:01:59.342+0530 I REPL     [rsSync] initial sync finishing up
+2016-04-25T14:01:59.343+0530 I REPL     [rsSync] set minValid=(term: 1, timestamp: Apr 25 13:59:33:1)
+2016-04-25T14:01:59.344+0530 I REPL     [rsSync] initial sync done
+2016-04-25T14:01:59.350+0530 I REPL     [ReplicationExecutor] transition to RECOVERING
+2016-04-25T14:01:59.359+0530 I REPL     [ReplicationExecutor] transition to SECONDARY
+2016-04-25T14:02:00.255+0530 I REPL     [ReplicationExecutor] could not find member to sync from
+2016-04-25T14:03:35.225+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62367 #6 (6 connections now open)
+2016-04-25T14:05:47.288+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62369 #7 (7 connections now open)
+2016-04-25T14:06:03.395+0530 I NETWORK  [conn7] end connection 127.0.0.1:62369 (6 connections now open)
+2016-04-25T14:06:15.406+0530 I REPL     [ReplicationExecutor] syncing from: localhost:27021
+2016-04-25T14:06:15.407+0530 I REPL     [SyncSourceFeedback] setting syncSourceFeedback to localhost:27021
+2016-04-25T14:06:16.411+0530 I ASIO     [NetworkInterfaceASIO-0] Successfully connected to localhost:27021
+2016-04-25T14:06:21.955+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:62375 #8 (7 connections now open)
+2016-04-25T14:06:40.275+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: End of file
+2016-04-25T14:06:40.276+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: End of file
+2016-04-25T14:06:41.382+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: An existing connection was forcibly closed by the remote host.
+2016-04-25T14:06:41.444+0530 I NETWORK  [conn5] end connection 127.0.0.1:62331 (6 connections now open)
+2016-04-25T14:06:42.276+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: End of file
+2016-04-25T14:06:42.277+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: End of file
+2016-04-25T14:06:45.389+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:06:46.277+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: End of file
+2016-04-25T14:06:46.385+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: An existing connection was forcibly closed by the remote host.
+2016-04-25T14:06:46.418+0530 I REPL     [ReplicationExecutor] could not find member to sync from
+2016-04-25T14:06:46.474+0530 I NETWORK  [conn4] end connection 127.0.0.1:62329 (5 connections now open)
+2016-04-25T14:06:47.308+0530 I NETWORK  [conn2] end connection 127.0.0.1:62320 (4 connections now open)
+2016-04-25T14:06:47.384+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:06:48.278+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:06:48.423+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:06:49.389+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:06:50.282+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:06:50.445+0530 I NETWORK  [conn3] end connection 127.0.0.1:62327 (3 connections now open)
+2016-04-25T14:06:50.505+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:06:51.419+0530 I ASIO     [ReplicationExecutor] dropping unhealthy pooled connection to localhost:27017
+2016-04-25T14:06:51.419+0530 I ASIO     [ReplicationExecutor] dropping unhealthy pooled connection to localhost:27017
+2016-04-25T14:06:51.419+0530 I ASIO     [ReplicationExecutor] after drop, pool was empty, going to spawn some connections
+2016-04-25T14:06:52.511+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:06:53.425+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:06:53.526+0530 I NETWORK  [conn1] end connection 127.0.0.1:62324 (2 connections now open)
+2016-04-25T14:06:55.424+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:06:56.397+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:06:56.420+0530 I ASIO     [ReplicationExecutor] dropping unhealthy pooled connection to localhost:27021
+2016-04-25T14:06:56.420+0530 I ASIO     [ReplicationExecutor] after drop, pool was empty, going to spawn some connections
+2016-04-25T14:06:57.121+0530 I REPL     [ReplicationExecutor] Not starting an election, since we are not electable
+2016-04-25T14:06:57.287+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:06:57.429+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:06:58.402+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:06:58.422+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:06:59.290+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:06:59.512+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:00.407+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:00.427+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:01.284+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:01.526+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:02.430+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:03.525+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:04.440+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:06.441+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:07.362+0530 I REPL     [ReplicationExecutor] Not starting an election, since we are not electable
+2016-04-25T14:07:07.410+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:08.289+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:08.452+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:09.412+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:09.433+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:10.288+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:10.540+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:11.423+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:11.433+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:12.347+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:12.547+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:13.437+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:14.550+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:15.453+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:17.469+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:18.307+0530 I REPL     [ReplicationExecutor] Not starting an election, since we are not electable
+2016-04-25T14:07:18.435+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:19.349+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:19.480+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:20.434+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:20.443+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:21.350+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:21.560+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:22.434+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:22.451+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:23.353+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:23.560+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:24.462+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:25.562+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:26.499+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:28.498+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:28.766+0530 I REPL     [ReplicationExecutor] Not starting an election, since we are not electable
+2016-04-25T14:07:29.435+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:30.358+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:30.498+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:31.440+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:31.471+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:32.357+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:32.572+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:33.457+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:33.487+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:34.362+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:34.581+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:35.493+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:36.596+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:37.500+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:39.178+0530 I REPL     [ReplicationExecutor] Not starting an election, since we are not electable
+2016-04-25T14:07:39.500+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:40.462+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:41.372+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:41.507+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:42.466+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:42.498+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:43.376+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:43.600+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:44.475+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:44.501+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:45.383+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:45.598+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:46.512+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:47.602+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:48.515+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:49.483+0530 I REPL     [ReplicationExecutor] Not starting an election, since we are not electable
+2016-04-25T14:07:50.520+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:51.477+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:52.396+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:52.596+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:53.483+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:53.520+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:54.397+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:54.604+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:55.502+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:55.518+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:56.502+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:56.693+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:57.604+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:58.699+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:07:59.605+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:00.776+0530 I REPL     [ReplicationExecutor] Not starting an election, since we are not electable
+2016-04-25T14:08:01.605+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:02.509+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:03.597+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:03.608+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:04.512+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:04.603+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:05.606+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:05.698+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:06.519+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:06.609+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:07.605+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:07.696+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:08.620+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:09.690+0530 I NETWORK  [conn8] end connection 127.0.0.1:62375 (1 connection now open)
+2016-04-25T14:08:09.699+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:10.612+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:11.312+0530 I REPL     [ReplicationExecutor] Not starting an election, since we are not electable
+2016-04-25T14:08:12.621+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:13.519+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:14.610+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:14.613+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:15.599+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:15.616+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:16.617+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:16.700+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:17.608+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:17.618+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:18.625+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:18.696+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:19.616+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:20.702+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:21.622+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:21.721+0530 I REPL     [ReplicationExecutor] Not starting an election, since we are not electable
+2016-04-25T14:08:23.626+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:24.611+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:25.627+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:25.627+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:26.608+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:26.622+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:27.642+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:27.712+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:28.614+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:28.630+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:29.644+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:29.723+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:30.625+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:31.727+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:32.574+0530 I REPL     [ReplicationExecutor] Not starting an election, since we are not electable
+2016-04-25T14:08:32.629+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:34.630+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:35.697+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:36.647+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:36.697+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:37.699+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:37.703+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:38.651+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:38.732+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:39.701+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:39.708+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:40.652+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:40.736+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:41.709+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:42.738+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:43.435+0530 I REPL     [ReplicationExecutor] Not starting an election, since we are not electable
+2016-04-25T14:08:43.701+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:45.701+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:46.707+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:47.660+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:47.707+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:48.708+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:48.714+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:49.671+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:49.740+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:50.709+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:50.723+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:51.682+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:51.741+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:52.714+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:53.739+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:54.447+0530 I REPL     [ReplicationExecutor] Not starting an election, since we are not electable
+2016-04-25T14:08:54.713+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:56.719+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:57.730+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:58.695+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:58.715+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:59.716+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:08:59.735+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:09:00.719+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:09:00.736+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:09:01.719+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:09:01.739+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:09:02.722+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:09:02.733+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:09:03.806+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:09:04.556+0530 I REPL     [ReplicationExecutor] Not starting an election, since we are not electable
+2016-04-25T14:09:04.743+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:09:05.719+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:09:07.722+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:09:08.738+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:09:09.729+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:09:09.730+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:09:10.741+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27019; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:09:10.811+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27021; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:09:11.725+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:09:11.743+0530 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27020; HostUnreachable: No connection could be made because the target machine actively refused it.
+2016-04-25T14:09:12.407+0530 I CONTROL  [thread1] CTRL_CLOSE_EVENT signal
+2016-04-25T14:09:12.407+0530 I CONTROL  [consoleTerminate] got CTRL_CLOSE_EVENT, will terminate after current cmd ends
+2016-04-25T14:09:12.407+0530 I FTDC     [consoleTerminate] Shutting down full-time diagnostic data capture
+2016-04-25T14:09:12.411+0530 I REPL     [consoleTerminate] Stopping replication applier threads
+2016-04-25T14:09:13.511+0530 I CONTROL  [consoleTerminate] now exiting
+2016-04-25T14:09:13.511+0530 I NETWORK  [consoleTerminate] shutdown: going to close listening sockets...
+2016-04-25T14:09:13.511+0530 I NETWORK  [consoleTerminate] closing listening socket: 500
+2016-04-25T14:09:13.511+0530 I NETWORK  [consoleTerminate] shutdown: going to flush diaglog...
+2016-04-25T14:09:13.511+0530 I NETWORK  [consoleTerminate] shutdown: going to close sockets...
+2016-04-25T14:09:13.512+0530 I STORAGE  [consoleTerminate] WiredTigerKVEngine shutting down
+2016-04-25T14:09:13.512+0530 I NETWORK  [conn6] end connection 127.0.0.1:62367 (0 connections now open)
+2016-04-25T14:09:13.563+0530 I STORAGE  [consoleTerminate] shutdown: removing fs lock...
+2016-04-25T14:09:13.563+0530 I CONTROL  [consoleTerminate] dbexit:  rc: 12

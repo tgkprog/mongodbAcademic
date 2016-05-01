@@ -1,0 +1,14 @@
+2016-04-25T13:59:50.988+0530 I CONTROL  [initandlisten] MongoDB starting : pid=8888 port=27022 dbpath=D:\data\mongoes\rs1\drs1F 64-bit host=t4
+2016-04-25T13:59:50.990+0530 I CONTROL  [initandlisten] targetMinOS: Windows Vista/Windows Server 2008
+2016-04-25T13:59:50.991+0530 I CONTROL  [initandlisten] db version v3.2.5
+2016-04-25T13:59:50.991+0530 I CONTROL  [initandlisten] git version: 34e65e5383f7ea1726332cb175b73077ec4a1b02
+2016-04-25T13:59:50.991+0530 I CONTROL  [initandlisten] allocator: tcmalloc
+2016-04-25T13:59:50.991+0530 I CONTROL  [initandlisten] modules: none
+2016-04-25T13:59:50.991+0530 I CONTROL  [initandlisten] build environment:
+2016-04-25T13:59:50.992+0530 I CONTROL  [initandlisten]     distarch: x86_64
+2016-04-25T13:59:50.992+0530 I CONTROL  [initandlisten]     target_arch: x86_64
+2016-04-25T13:59:50.992+0530 I CONTROL  [initandlisten] options: { net: { port: 27022 }, replication: { oplogSizeMB: 64, replSet: "m101" }, storage: { dbPath: "D:\data\mongoes\rs1\drs1F", mmapv1: { smallFiles: true } }, systemLog: { destination: "file", path: "6.log" } }
+2016-04-25T13:59:50.993+0530 I -        [initandlisten] Detected data files in D:\data\mongoes\rs1\drs1F created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2016-04-25T13:59:50.993+0530 W -        [initandlisten] Detected unclean shutdown - D:\data\mongoes\rs1\drs1F\mongod.lock is not empty.
+2016-04-25T13:59:50.994+0530 I STORAGE  [initandlisten] exception in initAndListen: 98 Unable to create/open lock file: D:\data\mongoes\rs1\drs1F\mongod.lock errno:32 The process cannot access the file because it is being used by another process.. Is a mongod instance already running?, terminating
+2016-04-25T13:59:50.994+0530 I CONTROL  [initandlisten] dbexit:  rc: 100

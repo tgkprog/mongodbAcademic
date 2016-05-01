@@ -1,0 +1,6 @@
+mongo --port 27017 <"D:\learn\mongo\mongoDbAcademic\w6\init_replica.js"
+mongo --port 27018 <"D:\learn\mongo\mongoDbAcademic\w6\init_replica.js"
+mongo --port 27019 <"D:\learn\mongo\mongoDbAcademic\w6\init_replica.js"
+mongo --port 27020 <"D:\learn\mongo\mongoDbAcademic\w6\init_replica.js"
+mongo --port 27021 <"D:\learn\mongo\mongoDbAcademic\w6\init_replica.js"
+mongo --port 27022 <"D:\learn\mongo\mongoDbAcademic\w6\init_replica.js"
