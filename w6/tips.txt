@@ -1,0 +1,22 @@
+In a java program, how to pass allowDiskUse in collection.aggregate()?
+
+
+MongoDatabase mongoDatabase = client.getDatabase("testDB");
+
+    MongoCollection collection = mongoDatabase.getCollection("testCollection");
+
+
+
+
+    // meaningless example
+
+    collection.aggregate(asList( new Document("$match",
+                                        new Document("country","USA")),
+                new Document("$group",new Document("_id","$state"))
+
+    )).allowDiskUse(true);
+    
+    
+    ===
+    
+    
