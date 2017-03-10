@@ -13,7 +13,7 @@ print(" cursor set  " );
 var c = 0;
 var bi = 0;
 while(ims.hasNext()){
-	c = c +1;
+	c++;
 	if(c > 5000){
 		bi++;
 		print(" at   big " + bi );	
